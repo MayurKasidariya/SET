@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="confirmation.aspx.cs" Inherits="confirmation" %>
+<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="confirmation.aspx.cs" Inherits="confirmation" %>
 
 
 <%--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">--%>
@@ -25,6 +25,31 @@
         })();
 
     </script>
+    <style type="text/css">
+    
+    .btn-success_new {
+    color: #fff;
+    background-color: #B0B34f;
+    border-color: #989a42;
+    display:block;
+    margin:0 auto;
+    margin-bottom:15px;
+}
+
+   .btn-success_new:hover
+   {
+       background-color: #989a42 !important;
+       color: #fff;
+   }
+
+.alert-info_new
+{
+    float:none;
+    width:360px;
+    margin:0 auto;
+    margin-bottom:15px;
+}
+    </style>
 
     <div class="row">
         <div class="col-sm-12">
@@ -59,12 +84,27 @@
                             By checking the box above I/We authorize Set Financial and its affiliates to make whatever credit inquiries it deems necessary in connection with my credit application or in the course of review or collection of any credit extended in reliance on the application.  I authorize and instruct any person or consumer reporting agency to comply and furnish any information it may have or obtain in response to such credit inquiries.  A photocopy of this authorization may be deemed to be the equivalent of the original.<br />
                             <br />
                             I also authorize Set Financial to contact my employer for the purpose of confirming my employment or location, or for assisting in collections of my account in the event I default on the loan installment contract.
+                            <br />
+                            <br />
+To the extent permitted by law, I give Set and its affiliates permission to (a) monitor and record any telephone conversations between Set/affiliate and me and (b) to contact me through manual, autodial, and prerecorded means, as well as on my wireless telephone (including text messaging) using any of the aforementioned technologies., (c) to contact me by private direct messaging services on social network sites in which I might be a member. I acknowledge that I may incur wireless telephone charges resulting from such contact.
                         </p>
+
+                                            <div class="col-sm-12">
+                            <asp:Button ID="_cmdDenyConnect" OnClick="_cmdDenyConnect_Click" runat="server" Text="Submit application" BackColor="#B0b34f" CssClass="btn btn-success_new" />
+            <div class="span alert alert-info alert-info_new"><span class="center">After this make sure you upload your Paystub.<%--  If military, send us your most recent End Of Month LES!--%></span> </div>
+        </div>
                     </div>
+                        
                 </div>
+                 <%--<div class="box_boder pad">--%>
+                
+                    
+
+        
+            <%--</div>--%>
             </div>
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-8" style="display:none" >
             <div class="box_boder">
                 <div class="pad">
                     <span class="bold-600 text-success">Use Facebook For Easier Loan Offer & Account Alert Management! </span>
@@ -83,7 +123,7 @@
             </div>
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-sm-4" style="display:none">
             <div class="box_boder">
                 <h2 class="head">Connection Benefits</h2>
                 <div class="pad">
@@ -97,18 +137,13 @@
                     <div class="center alert alert-danger"><span>We care. <a href="PDF/PrivacyNotice.pdf">Privacy Policy</a></span> </div>
                 </div>
             </div>
-            <div class="box_boder pad">
-                I'll pass.  I don't have facebook or do not care to connect regardless of the benefits
-                    <asp:Button ID="_cmdDenyConnect" OnClick="_cmdDenyConnect_Click" runat="server" Text="Submit app and stay unplugged" CssClass="btn btn-success" />
-            </div>
+       
         </div>
     </div>
     <div class="row">
         <div class="col-sm-2">
         </div>
-        <div class="col-sm-9">
-            <div class="span alert alert-info"><span class="center">After this make sure you upload your Paystub.  If military, send us your most recent End Of Month LES!</span> </div>
-        </div>
+
         <div class="col-sm-1">
         </div>
     </div>
